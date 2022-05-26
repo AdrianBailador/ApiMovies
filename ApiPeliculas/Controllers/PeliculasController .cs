@@ -126,7 +126,7 @@ namespace ApiPeliculas.Controllers
         /// </summary>
         /// <param name="peliculaDto"></param>
         /// <returns></returns>       
-       
+        [AllowAnonymous]
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(PeliculaDto))]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -180,7 +180,7 @@ namespace ApiPeliculas.Controllers
         /// Actualizar una película existente
         /// </summary>        
         /// <returns></returns>
-       
+        [AllowAnonymous]
         [HttpPatch("{peliculaId:int}", Name = "ActualizarPelicula")]
         [ProducesResponseType(204)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -208,7 +208,7 @@ namespace ApiPeliculas.Controllers
         /// </summary>
         /// <param name="peliculaId"> Este es el id de la película</param>
         /// <returns></returns>
-       
+        [AllowAnonymous]
         [HttpDelete("{peliculaId:int}", Name = "BorrarPelicula")]
         public IActionResult BorrarPelicula(int peliculaId)
         {           

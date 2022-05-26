@@ -39,6 +39,7 @@ namespace ApiPeliculas.Controllers
         /// Registro de nuevo usuario
         /// </summary>
         /// <returns></returns>
+        [AllowAnonymous]
         [HttpGet]       
         public IActionResult GetUsuarios()
         {
