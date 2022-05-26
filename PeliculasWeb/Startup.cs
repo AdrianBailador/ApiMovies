@@ -46,6 +46,12 @@ namespace PeliculasWeb
             app.UseStaticFiles();
 
             app.UseRouting();
+            //Damos soporte para CORS
+            app.UseCors(x=> x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                );
 
             app.UseAuthorization();
 
