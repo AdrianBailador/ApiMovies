@@ -77,7 +77,7 @@ namespace ApiPeliculas.Controllers
         /// </summary>
         /// <param name="categoriaDto"></param>
         /// <returns></returns>
-        
+        [AllowAnonymous]
         [HttpPost]
         [ProducesResponseType(201, Type = typeof(CategoriaDto))]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -114,7 +114,7 @@ namespace ApiPeliculas.Controllers
         /// <param name="categoriaId"></param>
         /// <param name="categoriaDto"></param>
         /// <returns></returns>    
-       
+        [AllowAnonymous]
         [HttpPatch("{categoriaId:int}", Name = "ActualizarCategoria")]
         [ProducesResponseType(204)]       
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -142,7 +142,7 @@ namespace ApiPeliculas.Controllers
         /// </summary>
         /// <param name="categoriaId"></param>
         /// <returns></returns>
-       
+        [AllowAnonymous]
         [HttpDelete("{categoriaId:int}", Name = "BorrarCategoria")]        
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
